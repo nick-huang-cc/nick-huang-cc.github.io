@@ -1,16 +1,9 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%
-String path = request.getContextPath();
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-%>
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'insert.jsp' starting page</title>
-    
+    <title>My JSP 'index.jsp' starting page</title>
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -19,58 +12,30 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-
   </head>
   
   <body>
-    This is my JSP page. <br>
-     <br/>
-   	 根目录= <%=path%>
-     <br/>
-   	 完全根目录= <%=basePath%>
-     <br/>
-         <form name="Tianjia" method="post" action="insert">
-	    <table>
-	        <tr> <th>用户编码</th><td><input type="text" name="u_i" size="64" style="width: 230px; "></td></tr>
-	        <tr><th>昵称</th><td><input type="text" name="n_n" size="128" style="width: 230px; "></td></tr>
-	        <tr><th>真实姓名</th><td><input type="text" name="r_n" size="32"></td></tr>
-	        <tr>
-	        	<th>性别</th>
-	        	<td>
-	        		<input type="radio" name="s" value="1">man &nbsp;&nbsp;&nbsp;
-	        		<input type="radio" name="s" value="0">woman &nbsp;&nbsp;&nbsp;
-	        		<input type="radio" name="s" value="-1" checked="checked">缺省
-	        	</td>
+  
+		<h2>操作信息</h2>
+  
+     <table border="1" style="border-collapse:collapse;border:none;">
+	        <tr style="background-color: white;color: hsl(0, 0%, 0%);text-shadow: 0px 0px 6px black;box-shadow: inset 0px 0px 20px 0px black;">
+		          <th style="border:solid #000 1px;">ID</th>
+		          <th style="border:solid #000 1px;">用户编码</th>
+		          <th style="border:solid #000 1px;">昵称</th>
+		          <th style="border:solid #000 1px;">真实姓名</th>
+		          <th style="border:solid #000 1px;">性别</th>
+		          <th style="border:solid #000 1px;">年龄</th>
+		          <th style="border:solid #000 1px;">证件号码</th>
+		          <th style="border:solid #000 1px;">手机</th>
+		          <th style="border:solid #000 1px;">固定电话</th>
+		          <th style="border:solid #000 1px;">网路邮箱</th>
+		          <th style="border:solid #000 1px;">失信等级</th>
+		          <th style="border:solid #000 1px;">居住地</th>
+		          <th style="border:solid #000 1px;">行为备注</th>
+		          <th style="border:solid #000 1px;">时间戳</th>
 	        </tr>
-	        <tr>
-	        	<th>年龄</th>
-	        	<td>
-	        		<input type="text" name="a" size="3">
-	        	</td>
-	        </tr>
-	        <tr><th>证件号码</th><td><input type="text" name="i_n" size="24" style="width: 230px; "></td></tr>
-	        <tr><th>手机</th><td><input type="text" name="p" size="16" style="width: 230px; "></td></tr>
-	        <tr><th>电话</th><td><input type="text" name="t_p" size="16" style="width: 230px; "></td></tr>
-	        <tr><th>网路邮箱</th><td><input type="text" name="e_m" size="64" style="width: 230px; "></td></tr>
-	        <tr>
-	        	<th>失信等级</th>
-	        	<td>
-	        		<input type="radio" name="g" value="-1">缺省&nbsp;&nbsp;
-	        		<input type="radio" name="g" value="0">一级&nbsp;&nbsp;
-	        		<input type="radio" name="g" value="1">二级&nbsp;&nbsp;
-	        		<input type="radio" name="g" value="2">三级&nbsp;&nbsp;
-	        		<input type="radio" name="g" value="3">四级&nbsp;&nbsp;
-	        		<input type="radio" name="g" value="4">五级&nbsp;&nbsp;
-	        		<input type="radio" name="g" value="5">六级&nbsp;&nbsp;
-	        		<input type="radio" name="g" value="6">七级&nbsp;&nbsp;
-	        		<input type="radio" name="g" value="7">八级&nbsp;&nbsp;
-	        	</td>
-	        </tr>
-	        <tr><th>居住地</th><td><textarea name="r_d" style="width: 530px; "></textarea></td></tr>
-	        <tr><th>行为备注</th><td><textarea name="r" style="width: 530px; "></textarea></td></tr>
-	        <tr><th>时间戳</th><td><input type="text" name="t_s" size="64" style="width: 230px; " value="2017-04-05 16:34:56.871"/></td></tr>
-	        <tr><td><input type="submit" value="送入资料"></td><td><input type="reset" value="重新录入"></td></tr>
-	    </table>
-    </form>
+    </table>    
+     
   </body>
 </html>
