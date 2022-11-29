@@ -22,7 +22,6 @@ jobs:
           python --version
           pip --version
           git --version
-          #yum -y install wget
           curl --version
           wget --version
       
