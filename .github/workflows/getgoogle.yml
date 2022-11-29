@@ -10,7 +10,6 @@ jobs:
   init-google:
     runs-on: ubuntu-latest
     steps:
-      #- uses: SupportTP/TargetWarehouse@master
       - name: System Time Change
         env:
           TZ: Asia/Shanghai
