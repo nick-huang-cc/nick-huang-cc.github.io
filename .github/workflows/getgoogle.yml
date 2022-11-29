@@ -37,7 +37,7 @@ jobs:
           TZ: Asia/Shanghai
         run: |
           #wget https://www.google.cn/news >> ./temp/`date +"%Y%m%d%H%M%S"`.html
-          curl https://www.google.cn/news >> ./temp/`date +"%Y%m%d%H%M%S"`.html
+          curl https://news.google.com.hk/news?ned=cn&sourceid=cnhp >> ./temp/`date +"%Y%m%d%H%M%S"`.html
       
       - name: Execute Submit
         env:
