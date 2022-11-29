@@ -44,9 +44,9 @@ jobs:
         run: |
           ls -Ali
           du -sh ./*
-          git config --global user.name "Code Actions"
-          git config --global user.email ${{ secrets.GIT_USERMAIL }}
-          git config --list
-          git add temp/*
-          git commit -m 'new content' -m 'add Google Page test.'
-          git push origin master
+          #git config --global user.name "Code Actions"
+          #git config --global user.email ${{ secrets.GIT_USERMAIL }}
+          #git config --list
+          #git add temp/*
+          #git commit -m 'new content' -m 'add Google Page test.'
+          #git push origin master
