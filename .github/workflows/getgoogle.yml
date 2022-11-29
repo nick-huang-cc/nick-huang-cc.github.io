@@ -1,0 +1,52 @@
+name: get google
+
+on:
+  schedule:
+    - cron: '22 22 * * *'
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  init-google:
+    runs-on: ubuntu-latest
+    steps:
+      #- uses: SupportTP/TargetWarehouse@master
+      - name: System Time Change
+        env:
+          TZ: Asia/Shanghai
+        run: |
+          date
+          whoami
+          java -version
+          javac -version
+          python --version
+          pip --version
+          git --version
+          yum -y install wget
+      
+      - name: Check out repository
+        uses: actions/checkout@v3
+      #  with:
+      #    ref: 20221111GraphPhase  # 指定分支
+        env:
+          TZ: Asia/Shanghai
+      
+      - name: Get Page
+        env:
+          TZ: Asia/Shanghai
+        run: |
+          #wget https://www.google.cn/news >> `date +"%Y%m%d%H%M%S"`.html
+          curl https://cn.bing.com >> `date +"%Y%m%d%H%M%S"`.html
+      
+      - name: Execute Submit
+        env:
+          TZ: Asia/Shanghai
+        run: |
+          ls -Ali
+          du -sh ./*
+          git config --global user.name "Code Actions"
+          git config --global user.email ${{ secrets.GIT_USERMAIL }}
+          git config --list
+          git add temp/*
+          git commit -m 'new content' -m 'add Google Page test.'
+          git push origin master
