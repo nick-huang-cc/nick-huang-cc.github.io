@@ -37,7 +37,7 @@ jobs:
         run: |
           #wget https://news.google.com/topstories?hl=zh-CN&gl=CN&ceid=CN:zh-Hans >> ./temp/`date +"%Y%m%d%H%M%S"`_zh.html
           #curl https://news.google.com/topstories?hl=en-AU&gl=AU&ceid=AU:en >> ./temp/`date +"%Y%m%d%H%M%S"`_au.html
-          curl  -H "Content-Type: application/json" -H "user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" https://news.google.com/topstories?hl=en-AU&gl=AU&ceid=AU:en >> ./temp/`date +"%Y%m%d%H%M%S"`_au.html
+          curl  -H 'Content-Type: application/json' -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36' https://news.google.com/topstories?hl=en-AU&gl=AU&ceid=AU:en >> ./temp/`date +"%Y%m%d%H%M%S"`_au.html
       
       - name: Execute Submit
         env:
