@@ -35,8 +35,8 @@ jobs:
         env:
           TZ: Asia/Shanghai
         run: |
-          #wget https://www.google.cn/news >> ./temp/`date +"%Y%m%d%H%M%S"`.html
-          curl https://news.google.com >> ./temp/`date +"%Y%m%d%H%M%S"`.html
+          wget https://news.google.com/topstories?hl=zh-CN&gl=CN&ceid=CN:zh-Hans >> ./temp/`date +"%Y%m%d%H%M%S"`_zh.html
+          curl https://news.google.com/topstories?hl=en-AU&gl=AU&ceid=AU:en >> ./temp/`date +"%Y%m%d%H%M%S"`_au.html
       
       - name: Execute Submit
         env:
