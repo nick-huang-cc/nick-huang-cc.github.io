@@ -1,4 +1,4 @@
-name: get google
+name: get page
 
 on:
   schedule:
