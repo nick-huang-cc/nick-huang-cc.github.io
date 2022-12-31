@@ -45,7 +45,6 @@ jobs:
         run: |
           ls -Ali
           du -sh ./*
-          #git config --global user.name ${{ GIT_USERNAME }}
           git config --global user.name "Code Actions"
           git config --global user.email ${{ secrets.GIT_USERMAIL }}
           git config --list
