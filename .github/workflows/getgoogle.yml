@@ -36,9 +36,9 @@ jobs:
           TZ: Asia/Shanghai
         run: |
           #wget https://cn.bing.com/topstories?hl=zh-CN&gl=CN&ceid=CN:zh-Hans >> ./temp/`date +"%Y%m%d%H%M%S"`_zh.html
-          #curl https://www.chinanews.com.cn/rss/society.xml >> ./temp/`date +"%Y%m%d%H%M%S"`_c_h_i_n_a_n_e_w_s-c_o_m-c_n.xml
+          curl https://www.chinanews.com.cn/rss/society.xml >> ./temp/`date +"%Y%m%d%H%M%S"`_c_h_i_n_a_n_e_w_s-c_o_m-c_n.xml
           #curl  -H 'Content-Type: application/json' -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36' https://cn.bing.com/topstories?hl=en-AU&gl=AU&ceid=AU:en >> ./temp/`date +"%Y%m%d%H%M%S"`_au.html
-          curl  -H 'Content-Type: application/json' -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36' https://rsshub.app/weibo/user/1681213010/0
+          #curl  -H 'Content-Type: application/json' -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36' https://rsshub.app/weibo/user/1681213010/0
       
       - name: Execute Submit
         env:
